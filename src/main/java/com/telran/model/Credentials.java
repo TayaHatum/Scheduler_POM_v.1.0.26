@@ -10,7 +10,9 @@ import lombok.experimental.Accessors;
 @Accessors(fluent = true)
 @Builder
 @ToString
+
 public class Credentials {
     String username;
     String password;
+
 }

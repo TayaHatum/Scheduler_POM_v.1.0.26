@@ -17,7 +17,19 @@ public class HomeScreen extends BaseScreen{
         super(driver);
     }
 
+public boolean isFabButtonPresent(){
+        should(fabAdd,15);
+        return true;
+}
+public  HomeScreen checkFabPresent(){
+        should(fabAdd,15);
+        return this;
+}
 
-
+public EditCreateEventScreen initCreationNew(){
+        fabAdd.click();
+        fabAddEvent.click();
+        return new EditCreateEventScreen(driver);
+}
 }
 

@@ -9,11 +9,12 @@ public class LaunchAppTest extends BaseTest {
 
     @Test
     public void launchTest(){
-
+String version = new SplashScreen(driver).getCurrentVersion();
+Assert.assertEquals(version,"0.0.3");
     }
 
     @Test
     public void checkVersion(){
-
+new SplashScreen(driver).checkVersion("0.0.3");
     }
 }

@@ -12,5 +12,11 @@ public class WizardScreen extends BaseScreen{
         super(driver);
     }
 
+public HomeScreen skipWizard(){
+        if(isDisplayedWithoutException(skipButton)){
+            skipButton.click();
+        }
+        return new HomeScreen(driver);
+}
 
 }

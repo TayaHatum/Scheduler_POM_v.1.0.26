@@ -13,6 +13,12 @@ public class SplashScreen extends BaseScreen{
         super(driver);
     }
 
-
+public  LoginScreen checkVersion( String version){
+        shouldHave(versionTextView,version,15);
+        return new LoginScreen(driver);
+}
+public String getCurrentVersion(){
+        return versionTextView.getText();
+}
 
 }
